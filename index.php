@@ -1,4 +1,10 @@
-<?php include __DIR__ ."/views/header.php";?>
+<?php include __DIR__ ."/views/header.php";
+      session_start();
+      if(!isset($_SESSION["emali"])){
+            header('Location: login.php');
+      }
+      session_destroy();
+?>
 <main>
       <div class="container text-center">
             <div class="row">
